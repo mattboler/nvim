@@ -45,6 +45,7 @@ call plug#end()
 let g:lightline = {'colorscheme': 'gruvbox'}
 
 " Vim-startify
+let g:startify_bookmarks = ['~/.config/nvim/init.vim']
 
 " GOYO
 
@@ -115,6 +116,8 @@ set noerrorbells
 
 " Don't redraw unless needed
 set lazyredraw
+
+" Allow buffers to be abandoned wihtout warnings
 set hidden
 
 " Give messages more room
