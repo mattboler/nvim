@@ -18,7 +18,7 @@ Plug 'mhinz/vim-startify'
 Plug 'junegunn/goyo.vim'
 
 " Fuzzy finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Show changes in gutter

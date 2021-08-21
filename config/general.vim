@@ -1,23 +1,41 @@
-" Filetype-awareness
+" ---------------------------
+" --- General nvim config ---
+" ---------------------------
+
+" Filetype-aware plugins and indenting
 filetype plugin on
 filetype indent on
 
-" Spacing/indents
+" --- Tabs and Indents ---
+
+" Use spaces instead of tabs
+set expandtab
+
+" Set 1 tab = 4 spaces
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
+" Backspace in multples of shiftwidth
 set shiftround
 
-set expandtab
+" Switch between shiftwidth and tabstops if needed
 set smarttab
 
+" Smart indenting
 set autoindent
 set smartindent
+
+" Copy indentation rules found in current file
 set copyindent
 
-" Searching
+" --- Searching ---
+
+" Show matches while typing
 set hlsearch
 set incsearch
+
+" Ignore case unless typing in mixed-case
 set ignorecase
 set smartcase
 
@@ -29,18 +47,23 @@ set wildmode=list:longest,full
 set number
 set title
 
-" STOP BEEPING AT ME
-set noerrorbells
 
 " Allow backspacing over everything
 set backspace=indent,eol,start  " Allow backspacing over everything
 
-" QOL
-set history=1000                " Remember more commands and search history
-set undolevels=1000             " 1000 levels of undo
-set noerrorbells                " Don't beep
+" Remember more commands and searches
+set history=1000
+" Undo more
+set undolevels=1000
+" STOP BEEPING AT ME 
+set noerrorbells
 
-set nolazyredraw
+" Don't redraw unless needed
+set lazyredraw
 set hidden
-set cmdheight=2                 " Better display for messages
+" Give messages more room
+set cmdheight=2
+" Update async stuff more often
 set updatetime=300
+
+set showmatch

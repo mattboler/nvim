@@ -12,3 +12,6 @@ tnoremap <Esc> <C-\><C-n>
 
 " No distractions mode
 nnoremap <leader>g :Goyo<CR>
+
+" Quick file search
+nnoremap <leader>f :Files<CR>
