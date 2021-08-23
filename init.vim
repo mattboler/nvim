@@ -171,4 +171,4 @@ nnoremap <leader>g :Goyo<CR>
 nnoremap <leader>ff :Files<CR>
 
 " Quick grep search
-nnoremap <leader>fg :Ag<CR>
+nnoremap <leader>fg :Rg<CR>
