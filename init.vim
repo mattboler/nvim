@@ -168,4 +168,7 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <leader>g :Goyo<CR>
 
 " Quick file search
-nnoremap <leader>f :Files<CR>
+nnoremap <leader>ff :Files<CR>
+
+" Quick grep search
+nnoremap <leader>fg :Ag<CR>
