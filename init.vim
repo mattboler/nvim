@@ -161,8 +161,10 @@ vmap j gj
 vmap k gk
 
 " Quick terminal
-nnoremap <leader>t :terminal<CR>
-tnoremap <Esc> <C-\><C-n>
+if has("nvim")
+    nnoremap <leader>t :terminal<CR>
+    tnoremap <Esc> <C-\><C-n>
+end
 
 " No distractions mode
 nnoremap <leader>g :Goyo<CR>
