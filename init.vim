@@ -27,9 +27,6 @@ Plug 'mhinz/vim-startify'
 " No distractions mode
 Plug 'junegunn/goyo.vim'
 
-" File tree
-Plug 'preservim/nerdtree'
-
 " Fuzzy finder
 Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -169,9 +166,6 @@ tnoremap <Esc> <C-\><C-n>
 
 " No distractions mode
 nnoremap <leader>g :Goyo<CR>
-
-" Quick file tree
-nnoremap <leader>ft :NERDTreeToggle<CR>
 
 " Quick file search
 nnoremap <leader>ff :Files<CR>
