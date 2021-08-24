@@ -171,7 +171,7 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <leader>g :Goyo<CR>
 
 " Quick file tree
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>ft :NERDTreeToggle<CR>
 
 " Quick file search
 nnoremap <leader>ff :Files<CR>
