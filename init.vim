@@ -45,7 +45,6 @@ call plug#end()
 let g:lightline = {'colorscheme': 'gruvbox'}
 
 " Vim-startify
-let g:startify_bookmarks = [{'c':'~/.config/nvim/init.vim'}]
 
 " GOYO
 
