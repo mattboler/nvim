@@ -27,6 +27,9 @@ Plug 'mhinz/vim-startify'
 " No distractions mode
 Plug 'junegunn/goyo.vim'
 
+" File tree
+Plug 'preservim/nerdtree'
+
 " Fuzzy finder
 Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -45,7 +48,7 @@ call plug#end()
 let g:lightline = {'colorscheme': 'gruvbox'}
 
 " Vim-startify
-let g:startify_bookmarks = ['~/.config/nvim/init.vim']
+let g:startify_bookmarks = [{'c':'~/.config/nvim/init.vim'}]
 
 " GOYO
 
@@ -166,6 +169,9 @@ tnoremap <Esc> <C-\><C-n>
 
 " No distractions mode
 nnoremap <leader>g :Goyo<CR>
+
+" Quick file tree
+nnoremap <leader>t :NERDTreeToggle<CR>
 
 " Quick file search
 nnoremap <leader>ff :Files<CR>
