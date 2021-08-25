@@ -42,7 +42,9 @@ call plug#end()
 " Vim-polyglot
 
 " Lightline
-let g:lightline = {'colorscheme': 'gruvbox'}
+let g:lightline = {
+    \ 'colorscheme': 'gruvbox'
+    \}
 
 " Vim-startify
 
@@ -146,7 +148,6 @@ syntax on
 " Colorscheme
 colorscheme gruvbox
 
-
 " ---
 " Keymaps
 " ---
@@ -173,3 +174,7 @@ nnoremap <leader>ff :Files<CR>
 
 " Quick grep search
 nnoremap <leader>fg :Rg<CR>
+
+" Move between buffers
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>p :bp<CR>
