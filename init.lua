@@ -1,9 +1,9 @@
--- Package Mangement
 local fn = vim.fn
 local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
+-- Package Mangement
 local install_path = fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -11,8 +11,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 require "paq" {
-	"savq/paq-nvim"; -- Package Manager
-	"sainnhe/gruvbox-material"; -- Colorscheme
+  -- Package Manageer
+	"savq/paq-nvim"; 
+  -- UI/Colorscheme
+	"sainnhe/gruvbox-material"; -- Colorscheme <3
+  -- Utils
   "nvim-lua/plenary.nvim"; -- For telescope
   "nvim-telescope/telescope.nvim"; -- Fuzzy finder
 }
@@ -39,3 +42,8 @@ opt.hlsearch = true -- Highlight matches
 opt.incsearch = true -- Match as you type
 opt.ignorecase = true -- Case-insensitive matching
 opt.smartcase = true -- ... unless you type in mixed case
+
+-- Keybinds
+g.mapleader = ";"
+vim.api.nvim_set_keymap('n', '<Leader>ff', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], {noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>fg', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], {noremap = true, silent = true })
