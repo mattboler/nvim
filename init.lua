@@ -14,21 +14,35 @@ require "paq" {
   -- Package Manageer
 	"savq/paq-nvim"; 
   -- UI/Colorscheme
-	"sainnhe/gruvbox-material"; -- Colorscheme <3
-  -- Utils
+  "RRethy/nvim-base16";
+  'mhinz/vim-signify'; -- Show git signs in gutter
+  'mhinz/vim-startify'; -- Startup screen
+  -- Language support
+  'nvim-treesitter/nvim-treesitter'; -- Treesitter
+  -- Fuzzy Finding
   "nvim-lua/plenary.nvim"; -- For telescope
   "nvim-telescope/telescope.nvim"; -- Fuzzy finder
 }
 
 -- UI Configuration
 opt.termguicolors = true -- Enable 256-color
-g.gruvbox_material_palette = 'original' -- Use original gruvbox colors
-cmd 'colorscheme gruvbox-material' -- Set colorscheme
+cmd 'colorscheme base16-google-light' -- Set colorscheme
 opt.number = true -- Show line numbers
 opt.scrolloff = 8 -- Rows of contet when when scrolling
 opt.sidescrolloff = 8 -- Columns of context when scrolling
 opt.splitbelow = true -- New hsplits are below current window
 opt.splitright = true -- New vsplits are to right of current window
+
+local ts = require 'nvim-treesitter.configs'
+ts.setup {
+  ensure_installed = 'maintained',
+  highlight = {enable = true},
+  indent = {enable = true}
+}
+
+g.signify_sign_add='+'
+g.signify_sign_delete='-'
+g.signify_sign_change='|'
 
 -- Indentation
 opt.expandtab = true -- Use spaces instead of tabs
