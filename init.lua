@@ -26,7 +26,7 @@ require "paq" {
 
 -- UI Configuration
 opt.termguicolors = true -- Enable 256-color
-cmd 'colorscheme base16-google-light' -- Set colorscheme
+cmd 'colorscheme base16-gruvbox-dark-pale' -- Set colorscheme
 opt.number = true -- Show line numbers
 opt.scrolloff = 8 -- Rows of contet when when scrolling
 opt.sidescrolloff = 8 -- Columns of context when scrolling
