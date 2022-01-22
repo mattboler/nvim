@@ -15,7 +15,7 @@ require "paq" {
 	"savq/paq-nvim"; 
 
   ---- UI/Colorscheme
-  -- Base16 colorschemes for NeoVIM
+  -- Base16 colorschemes
   "RRethy/nvim-base16";
 
   -- Add git status symbols to the gutter
@@ -36,7 +36,7 @@ require "paq" {
   'JuliaEditorSupport/julia-vim';
 
   ---- Etc
-  "nvim-lua/plenary.nvim"; -- For telescope
+  "nvim-lua/plenary.nvim"; -- Utility functions used by Telescope
 }
 
 ---- UI Configuration
