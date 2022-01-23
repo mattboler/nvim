@@ -18,6 +18,9 @@ require "paq" {
   -- Base16 colorschemes
   "RRethy/nvim-base16";
 
+  -- Add status bar
+  "nvim-lualine/lualine.nvim";
+
   -- Add git status symbols to the gutter
   'mhinz/vim-signify';
 
@@ -39,7 +42,8 @@ require "paq" {
   "nvim-lua/plenary.nvim"; -- Utility functions used by Telescope
 }
 
-require("options") -- Import general editor config
+-- Load editor config
+require("options")
 
 ----- Plugin configs
 cmd 'colorscheme base16-gruvbox-dark-pale' -- Set colorscheme
@@ -54,6 +58,9 @@ g.signify_sign_add='+'
 g.signify_sign_delete='-'
 g.signify_sign_change='|'
 
+require("lualine").setup {
+  options = { theme = 'gruvbox' }
+}
 
 ---- Keybinds
 g.mapleader = ";"
