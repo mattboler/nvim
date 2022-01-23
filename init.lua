@@ -39,14 +39,10 @@ require "paq" {
   "nvim-lua/plenary.nvim"; -- Utility functions used by Telescope
 }
 
----- UI Configuration
-opt.termguicolors = true                   -- Enable 256-color
+require("options") -- Import general editor config
+
+----- Plugin configs
 cmd 'colorscheme base16-gruvbox-dark-pale' -- Set colorscheme
-opt.number = true                          -- Show line numbers
-opt.scrolloff = 8                          -- Rows of contet when when scrolling
-opt.sidescrolloff = 8                      -- Columns of context when scrolling
-opt.splitbelow = true                      -- New hsplits are below current window
-opt.splitright = true                      -- New vsplits are to right of current window
 
 local ts = require 'nvim-treesitter.configs'
 ts.setup {
@@ -58,18 +54,6 @@ g.signify_sign_add='+'
 g.signify_sign_delete='-'
 g.signify_sign_change='|'
 
----- Indentation
-opt.expandtab = true   -- Use spaces instead of tabs
-opt.tabstop = 2        -- A tab is 2 spaces
-opt.shiftwidth = 2     -- An indent is 2 spaces
-opt.shiftround = true  -- Round indents
-opt.smartindent = true -- Automatically indent
-
----- Searching
-opt.hlsearch = true   -- Highlight matches
-opt.incsearch = true  -- Match as you type
-opt.ignorecase = true -- Case-insensitive matching
-opt.smartcase = true  -- ... unless you type in mixed case
 
 ---- Keybinds
 g.mapleader = ";"
