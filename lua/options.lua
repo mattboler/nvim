@@ -4,6 +4,7 @@ local opt = vim.opt
 local g = vim.g
 
 ---- UI Configuration
+cmd 'colorscheme base16-gruvbox-dark-pale' -- Set colorscheme
 opt.termguicolors = true                   -- Enable 256-color
 opt.number = true                          -- Show line numbers
 opt.scrolloff = 8                          -- Rows of contet when when scrolling
