@@ -39,8 +39,7 @@ require "paq" {
   'JuliaEditorSupport/julia-vim';
 
   -- Add wakatime analytics
-  'wakatime/vim-wakatime'
-
+  'wakatime/vim-wakatime';
 }
 
 ----- Plugin configs
