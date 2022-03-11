@@ -25,6 +25,10 @@ require "paq" {
   -- Add git status symbols to the gutter
   'mhinz/vim-signify';
 
+  -- Add file explorer
+  "kyazdani42/nvim-tree.lua";
+  "kyazdani42/nvim-web-devicons"; -- Icons used by nvim-tree
+
   -- Show a recent files screen on startup
   'mhinz/vim-startify';
 
@@ -55,4 +59,8 @@ g.signify_sign_change='|'
 
 require("lualine").setup {
   options = { theme = 'gruvbox' }
+}
+
+require("nvim-tree").setup{
+
 }
