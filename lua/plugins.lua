@@ -16,34 +16,22 @@ require "paq" {
   ---- Package Manageer
 	"savq/paq-nvim"; 
 
-  -- Base16 colorschemes
-  "RRethy/nvim-base16";
+  ---- UI Plugins
+  "RRethy/nvim-base16"; -- Colorschemes
+  'nvim-treesitter/nvim-treesitter'; -- Better syntax highlighting
+  "nvim-lualine/lualine.nvim"; -- Status line
+  "kyazdani42/nvim-web-devicons"; -- Filetype icons for file explorer and status line
+  'mhinz/vim-signify'; -- Git status symbols
+  
+  ---- General Functionality
+  "kyazdani42/nvim-tree.lua"; -- File explorer
+  "nvim-telescope/telescope.nvim"; -- Fuzzy-finder
+  "nvim-lua/plenary.nvim"; -- Utility functions for fuzzy-finder
+  'mhinz/vim-startify'; -- Startup screen
+  'wakatime/vim-wakatime'; -- Wakatime logging
 
-  -- Add status bar
-  "nvim-lualine/lualine.nvim";
-
-  -- Add git status symbols to the gutter
-  'mhinz/vim-signify';
-
-  -- Add file explorer
-  "kyazdani42/nvim-tree.lua";
-  "kyazdani42/nvim-web-devicons"; -- Icons used by nvim-tree
-
-  -- Show a recent files screen on startup
-  'mhinz/vim-startify';
-
-  -- Activate NeoVIM's improved syntax highlighting
-  'nvim-treesitter/nvim-treesitter';
-
-  -- Add fuzzy-finding in popup window
-  "nvim-telescope/telescope.nvim";
-  "nvim-lua/plenary.nvim"; -- Utility functions used by Telescope
-
-  -- Add latex->unicode support in Julia
-  'JuliaEditorSupport/julia-vim';
-
-  -- Add wakatime analytics
-  'wakatime/vim-wakatime';
+  ---- Language-specific
+  'JuliaEditorSupport/julia-vim'; -- Julia utilities
 }
 
 ----- Plugin configs
@@ -58,7 +46,8 @@ g.signify_sign_delete='-'
 g.signify_sign_change='|'
 
 require("lualine").setup {
-  options = { theme = 'gruvbox' }
+  options = { theme = 'gruvbox' },
+  extensions = { 'nvim-tree' },
 }
 
 require("nvim-tree").setup{
