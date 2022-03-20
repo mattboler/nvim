@@ -26,10 +26,7 @@ vim.api.nvim_set_keymap(
   "t",
   "<Esc>",
   "<C-\\><C-n>",
-  {
-    noremap=true,
-    silent=true
-  }
+  opts
 )
 
 -- <leader>ff searches file names
@@ -37,27 +34,19 @@ vim.api.nvim_set_keymap(
   "n", 
   "<Leader>ff", 
   [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], 
-  {
-    noremap = true, silent = true 
-  }
+  opts
 )
 -- <leader>fg searches within files
 vim.api.nvim_set_keymap(
   "n", 
   "<Leader>fg", 
   [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], 
-  {
-    noremap = true, 
-    silent = true 
-  }
+  opts
 )
 -- <leader>e opens file explorer
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>e",
   ":NvimTreeToggle<CR>",
-  {
-    noremap = true,
-    silent = true
-  }
+  opts
 )
