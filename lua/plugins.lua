@@ -15,14 +15,14 @@ end
 local paq = require('paq')
 paq({
   ---- Package Manageer
-	"savq/paq-nvim"; 
+	'savq/paq-nvim'; 
 
   -- Dependencies
   "nvim-lua/plenary.nvim"; -- Utility functions for fuzzy-finder
   "kyazdani42/nvim-web-devicons"; -- Filetype icons for file explorer and status line
 
   -- Common
-  "RRethy/nvim-base16"; -- Colorscheme
+  'RRethy/nvim-base16'; -- Colorscheme
   'nvim-treesitter/nvim-treesitter'; -- Syntax highlighting
   'nvim-lualine/lualine.nvim'; -- Status line
   'lewis6991/gitsigns.nvim'; -- Git status icons
