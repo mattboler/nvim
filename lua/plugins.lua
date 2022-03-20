@@ -12,44 +12,32 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 ---- Install plugins
-require "paq" {
+local paq = require('paq')
+paq({
   ---- Package Manageer
 	"savq/paq-nvim"; 
 
-  ---- UI Plugins
-  "RRethy/nvim-base16"; -- Colorschemes
-  'nvim-treesitter/nvim-treesitter'; -- Better syntax highlighting
-  "nvim-lualine/lualine.nvim"; -- Status line
-  "kyazdani42/nvim-web-devicons"; -- Filetype icons for file explorer and status line
-  'mhinz/vim-signify'; -- Git status symbols
-  
-  ---- General Functionality
-  "kyazdani42/nvim-tree.lua"; -- File explorer
-  "nvim-telescope/telescope.nvim"; -- Fuzzy-finder
+  -- Dependencies
   "nvim-lua/plenary.nvim"; -- Utility functions for fuzzy-finder
-  'mhinz/vim-startify'; -- Startup screen
-  'wakatime/vim-wakatime'; -- Wakatime logging
+  "kyazdani42/nvim-web-devicons"; -- Filetype icons for file explorer and status line
 
-  ---- Language-specific
+  -- Common
+  "RRethy/nvim-base16"; -- Colorscheme
+  'nvim-treesitter/nvim-treesitter'; -- Syntax highlighting
+  'nvim-lualine/lualine.nvim'; -- Status line
+  'lewis6991/gitsigns.nvim'; -- Git status icons
+  'kyazdani42/nvim-tree.lua'; -- File explorer
+  'nvim-telescope/telescope.nvim'; -- Fuzzy-finder
+
+  -- Language servers
+
+  -- Julia
   'JuliaEditorSupport/julia-vim'; -- Julia utilities
-}
+})
 
 ----- Plugin configs
-local ts = require 'nvim-treesitter.configs'
-ts.setup {
-  ensure_installed = 'maintained',
-  highlight = {enable = true},
-}
-
-g.signify_sign_add='+'
-g.signify_sign_delete='-'
-g.signify_sign_change='|'
-
-require("lualine").setup {
-  options = { theme = 'gruvbox' },
-  extensions = { 'nvim-tree' },
-}
-
-require("nvim-tree").setup{
-
-}
+require('configure.treesitter')
+require('configure.lualine')
+require('configure.gitsigns')
+require('configure.nvim-tree')
+require('configure.telescope')
