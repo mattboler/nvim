@@ -23,8 +23,12 @@ paq({
 
   -- Common
   'RRethy/nvim-base16'; -- Colorscheme
-  'nvim-treesitter/nvim-treesitter'; -- Syntax highlighting
+  {
+    'nvim-treesitter/nvim-treesitter', -- Syntax highlighting
+    run=TSUpdate
+  }; 
   'nvim-lualine/lualine.nvim'; -- Status line
+  'goolord/alpha-nvim'; -- Startup screen
   'lewis6991/gitsigns.nvim'; -- Git status icons
   'kyazdani42/nvim-tree.lua'; -- File explorer
   'nvim-telescope/telescope.nvim'; -- Fuzzy-finder
@@ -40,6 +44,7 @@ paq({
 ---- Plugin configs
 require('configure.treesitter')
 require('configure.lualine')
+require('configure.alpha')
 require('configure.gitsigns')
 require('configure.nvim-tree')
 require('configure.telescope')
