@@ -39,7 +39,6 @@ paq({
 
   -- Language-specific
   'JuliaEditorSupport/julia-vim';
-  'lervag/vimtex';
 })
 
 ---- Plugin configs
