@@ -32,6 +32,7 @@ paq({
   'lewis6991/gitsigns.nvim'; -- Git status icons
   'kyazdani42/nvim-tree.lua'; -- File explorer
   'nvim-telescope/telescope.nvim'; -- Fuzzy-finder
+  'folke/todo-comments.nvim'; -- Highlight special comments
 
   -- Language servers
   'neovim/nvim-lspconfig'; -- Configure LSPs
@@ -48,4 +49,6 @@ require('configure.alpha')
 require('configure.gitsigns')
 require('configure.nvim-tree')
 require('configure.telescope')
+require('configure.todo-comments')
+
 require('configure.lsp-config')
