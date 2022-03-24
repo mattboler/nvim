@@ -14,12 +14,12 @@ end
 ---- Install plugins
 local paq = require('paq')
 paq({
-  ---- Package Manageer
+  -- Package Manageer
 	'savq/paq-nvim'; 
 
   -- Dependencies
-  "nvim-lua/plenary.nvim"; -- Utility functions for fuzzy-finder
-  "kyazdani42/nvim-web-devicons"; -- Filetype icons for file explorer and status line
+  "nvim-lua/plenary.nvim"; -- Utility functions
+  "kyazdani42/nvim-web-devicons"; -- Filetype icons
 
   -- Common
   'RRethy/nvim-base16'; -- Colorscheme
@@ -30,14 +30,17 @@ paq({
   'nvim-telescope/telescope.nvim'; -- Fuzzy-finder
 
   -- Language servers
+  'neovim/nvim-lspconfig'; -- Configure LSPs
+  'williamboman/nvim-lsp-installer'; -- Easy LSP install
 
   -- Julia
   'JuliaEditorSupport/julia-vim'; -- Julia utilities
 })
 
------ Plugin configs
+---- Plugin configs
 require('configure.treesitter')
 require('configure.lualine')
 require('configure.gitsigns')
 require('configure.nvim-tree')
 require('configure.telescope')
+require('configure.lsp-config')
