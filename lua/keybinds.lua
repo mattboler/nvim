@@ -24,21 +24,21 @@ vim.api.nvim_set_keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- <leader>ff searches file names
 vim.api.nvim_set_keymap(
-  "n", 
-  "<Leader>ff", 
-  [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], 
-  opts
+    "n", 
+    "<Leader>ff", 
+    [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], 
+    opts
 )
 -- <leader>fg searches within files
 vim.api.nvim_set_keymap(
-  "n", 
-  "<Leader>fg", 
-  [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], 
-  opts
+    "n", 
+    "<Leader>fg", 
+    [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], 
+    opts
 )
 
 -- :light and :dark switch themes!
 cmd [[
-  command! Light execute 'colorscheme ' .. g:light_colorscheme
-  command! Dark execute 'colorscheme ' .. g:dark_colorscheme
+    command! Light execute 'colorscheme ' .. g:light_colorscheme
+    command! Dark execute 'colorscheme ' .. g:dark_colorscheme
 ]]

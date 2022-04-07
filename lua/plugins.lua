@@ -8,37 +8,36 @@ local g = vim.g
 local install_path = fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({'git', 'clone', '--depth=1', 'https://github.com/savq/paq-nvim.git', install_path})
+    fn.system({'git', 'clone', '--depth=1', 'https://github.com/savq/paq-nvim.git', install_path})
 end
 
 ---- Install plugins
 local paq = require('paq')
 paq({
-  -- Package Manageer
-	'savq/paq-nvim'; 
+    -- Package Manageer
+    'savq/paq-nvim'; 
 
-  -- Dependencies
-  "nvim-lua/plenary.nvim"; -- Utility functions
-  "kyazdani42/nvim-web-devicons"; -- Filetype icons
+    -- Dependencies
+    "nvim-lua/plenary.nvim"; -- Utility functions
+    "kyazdani42/nvim-web-devicons"; -- Filetype icons
 
-  -- Common
-  'RRethy/nvim-base16'; -- Colorscheme
-  {
-    'nvim-treesitter/nvim-treesitter', -- Syntax highlighting
-    run=TSUpdate
-  }; 
-  'nvim-lualine/lualine.nvim'; -- Status line
-  'lewis6991/gitsigns.nvim'; -- Git status icons
-  'kyazdani42/nvim-tree.lua'; -- File explorer
-  'nvim-telescope/telescope.nvim'; -- Fuzzy-finder
-  'folke/todo-comments.nvim'; -- Highlight special comments
+    -- Common
+    'RRethy/nvim-base16'; -- Colorscheme
+    {
+        'nvim-treesitter/nvim-treesitter', -- Syntax highlighting
+        run=TSUpdate
+    }; 'nvim-lualine/lualine.nvim'; -- Status line
+    'lewis6991/gitsigns.nvim'; -- Git status icons
+    'kyazdani42/nvim-tree.lua'; -- File explorer
+    'nvim-telescope/telescope.nvim'; -- Fuzzy-finder
+    'folke/todo-comments.nvim'; -- Highlight special comments
 
-  -- Language servers
-  'neovim/nvim-lspconfig'; -- Configure LSPs
-  'williamboman/nvim-lsp-installer'; -- Easy LSP install
+    -- Language servers
+    'neovim/nvim-lspconfig'; -- Configure LSPs
+    'williamboman/nvim-lsp-installer'; -- Easy LSP install
 
-  -- Language-specific
-  'JuliaEditorSupport/julia-vim';
+    -- Language-specific
+    'JuliaEditorSupport/julia-vim';
 })
 
 ---- Plugin configs
