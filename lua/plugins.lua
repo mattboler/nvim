@@ -18,22 +18,23 @@ paq({
     'savq/paq-nvim'; 
 
     -- Dependencies
-    "nvim-lua/plenary.nvim"; -- Utility functions
+    "nvim-lua/plenary.nvim";        -- Utility functions
     "kyazdani42/nvim-web-devicons"; -- Filetype icons
 
     -- Common
-    'RRethy/nvim-base16'; -- Colorscheme
+    'RRethy/nvim-base16';                  -- Colorscheme
     {
         'nvim-treesitter/nvim-treesitter', -- Syntax highlighting
         run=TSUpdate
-    }; 'nvim-lualine/lualine.nvim'; -- Status line
-    'lewis6991/gitsigns.nvim'; -- Git status icons
-    'kyazdani42/nvim-tree.lua'; -- File explorer
-    'nvim-telescope/telescope.nvim'; -- Fuzzy-finder
-    'folke/todo-comments.nvim'; -- Highlight special comments
+    }; 'nvim-lualine/lualine.nvim';        -- Status line
+    'lewis6991/gitsigns.nvim';             -- Git status icons
+    'kyazdani42/nvim-tree.lua';            -- File explorer
+    'nvim-telescope/telescope.nvim';       -- Fuzzy-finder
+    'folke/todo-comments.nvim';            -- Highlight special comments
+    'sunjon/Shade.nvim';                   -- Dim inactive windows
 
     -- Language servers
-    'neovim/nvim-lspconfig'; -- Configure LSPs
+    'neovim/nvim-lspconfig';           -- Configure LSPs
     'williamboman/nvim-lsp-installer'; -- Easy LSP install
 
     -- Language-specific
@@ -47,4 +48,5 @@ require('configure.gitsigns')
 require('configure.nvim-tree')
 require('configure.telescope')
 require('configure.todo-comments')
+require('configure.shade')
 require('configure.lsp-config')
