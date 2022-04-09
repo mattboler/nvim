@@ -3,7 +3,6 @@ local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
-
 ---- Bootstrap plugin manager
 local install_path = fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
 
@@ -18,15 +17,16 @@ paq({
     'savq/paq-nvim'; 
 
     -- Dependencies
-    "nvim-lua/plenary.nvim";        -- Utility functions
-    "kyazdani42/nvim-web-devicons"; -- Filetype icons
+    "nvim-lua/plenary.nvim";               -- Utility functions
+    "kyazdani42/nvim-web-devicons";        -- Filetype icons
 
     -- Common
     'RRethy/nvim-base16';                  -- Colorscheme
     {
         'nvim-treesitter/nvim-treesitter', -- Syntax highlighting
         run=TSUpdate
-    }; 'nvim-lualine/lualine.nvim';        -- Status line
+    }; 
+    'nvim-lualine/lualine.nvim';           -- Status line
     'lewis6991/gitsigns.nvim';             -- Git status icons
     'kyazdani42/nvim-tree.lua';            -- File explorer
     'nvim-telescope/telescope.nvim';       -- Fuzzy-finder
@@ -34,11 +34,11 @@ paq({
     'sunjon/Shade.nvim';                   -- Dim inactive windows
 
     -- Language servers
-    'neovim/nvim-lspconfig';           -- Configure LSPs
-    'williamboman/nvim-lsp-installer'; -- Easy LSP install
+    'neovim/nvim-lspconfig';               -- Configure LSPs
+    'williamboman/nvim-lsp-installer';     -- Easy LSP install
 
     -- Language-specific
-    'JuliaEditorSupport/julia-vim';
+    'JuliaEditorSupport/julia-vim';        -- Julia unicode completion
 })
 
 ---- Plugin configs
