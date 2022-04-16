@@ -27,7 +27,7 @@ paq({
     "kyazdani42/nvim-web-devicons";        -- Filetype icons
 
     -- Common
-    'RRethy/nvim-base16';                  -- Colorscheme
+    'RRethy/nvim-base16';                  -- Colorschemes
     {
         'nvim-treesitter/nvim-treesitter', -- Syntax highlighting
         run=TSUpdate

@@ -1,11 +1,10 @@
-local fn = vim.fn
 local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
 ---- UI Configuration
-g.light_colorscheme = 'base16-gruvbox-light-hard'
-g.dark_colorscheme = 'base16-gruvbox-dark-pale'
+g.light_colorscheme = 'base16-grayscale-light'
+g.dark_colorscheme = 'base16-nord'
 
 cmd [[execute 'colorscheme ' .. g:dark_colorscheme]]
 
