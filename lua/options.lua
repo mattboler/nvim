@@ -3,8 +3,8 @@ local opt = vim.opt
 local g = vim.g
 
 ---- UI Configuration
-g.light_colorscheme = 'base16-grayscale-light'
-g.dark_colorscheme = 'base16-nord'
+g.light_colorscheme = 'base16-default-light'
+g.dark_colorscheme = 'base16-default-dark'
 
 cmd [[execute 'colorscheme ' .. g:dark_colorscheme]]
 
